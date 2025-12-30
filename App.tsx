@@ -44,7 +44,7 @@ const App: React.FC = () => {
   const [weightPerCube, setWeightPerCube] = useState<number>(() => getSavedData(STORAGE_KEYS.WEIGHT, 20));
 
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
-  const [activeTab, setActiveTab] = useState<'calendar' | 'cubes' | 'preps' | 'orders' | 'recipes' | 'stats' | 'archive'>('calendar');
+  const [activeTab, setActiveTab] = useState<'Calendar' | 'cubes' | 'preps' | 'orders' | 'recipes' | 'stats' | 'archive'>('Calendar');
   const [isDayModalOpen, setIsDayModalOpen] = useState(false);
   
   // 상태 변경 시마다 로컬 스토리지 동기화
@@ -176,7 +176,7 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className="flex gap-1 sm:gap-2">
-             <button onClick={() => setActiveTab('calendar')} className={`p-2 rounded-xl transition-all ${activeTab === 'calendar' ? 'bg-pink-50 text-pink-500 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`} title="달력"><LayoutDashboard className="w-5 h-5 sm:w-6 h-6" /></button>
+             <button onClick={() => setActiveTab('Calendar')} className={`p-2 rounded-xl transition-all ${activeTab === 'Calendar' ? 'bg-pink-50 text-pink-500 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`} title="달력"><LayoutDashboard className="w-5 h-5 sm:w-6 h-6" /></button>
              <button onClick={() => setActiveTab('cubes')} className={`p-2 rounded-xl transition-all ${activeTab === 'cubes' ? 'bg-pink-50 text-pink-500 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`} title="큐브관리"><Box className="w-5 h-5 sm:w-6 h-6" /></button>
              <button onClick={() => setActiveTab('preps')} className={`p-2 rounded-xl transition-all ${activeTab === 'preps' ? 'bg-amber-50 text-amber-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`} title="제조 예정"><ClipboardList className="w-5 h-5 sm:w-6 h-6" /></button>
              <button onClick={() => setActiveTab('orders')} className={`p-2 rounded-xl transition-all ${activeTab === 'orders' ? 'bg-indigo-50 text-indigo-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`} title="주문"><ShoppingCart className="w-5 h-5 sm:w-6 h-6" /></button>
@@ -188,7 +188,7 @@ const App: React.FC = () => {
       </header>
 
       <main className="max-w-7xl mx-auto p-3 sm:p-6 md:p-8">
-        {activeTab === 'calendar' && (
+        {activeTab === 'Calendar' && (
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 md:gap-8 items-start">
             <div className="sm:col-span-7 lg:col-span-8">
               <Calendar plans={plans} cubes={cubes} orders={orders} preps={preps} selectedDate={selectedDate} onDateSelect={handleDateClick} />
