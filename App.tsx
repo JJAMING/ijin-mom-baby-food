@@ -2,15 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, LayoutDashboard, Box, ShoppingCart, ChefHat, BarChart3, ClipboardList, History } from 'lucide-react';
 import { format, addDays } from 'date-fns';
-import Calendar from './components/Calendar';
-import CubeManager from './components/CubeManager';
-import OrderLog from './components/OrderLog';
-import PreparationLog from './components/PreparationLog';
-import RecipeHelper from './components/RecipeHelper';
-import MealDetail from './components/MealDetail';
-import StatsDashboard from './components/StatsDashboard';
-import DayDetailModal from './components/DayDetailModal';
-import ManufacturingLog from './components/ManufacturingLog';
+import Calendar from './Calendar';
+import CubeManager from './CubeManager';
+import OrderLog from './OrderLog';
+import PreparationLog from './PreparationLog';
+import RecipeHelper from './RecipeHelper';
+import MealDetail from './MealDetail';
+import StatsDashboard from './StatsDashboard';
+import DayDetailModal from './DayDetailModal';
+import ManufacturingLog from './ManufacturingLog';
 import { DayPlan, CubeRecord, OrderRecord, MealRecord, PreparationRecord, Ingredient, ManufacturingRecord } from './types';
 
 const STORAGE_KEYS = {
